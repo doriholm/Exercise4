@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:Exercise4" x:Class="Exercise4.Exercise4Page"
+             NavigationPage.HasNavigationBar="false"
+             >
+
+    <StackLayout BackgroundColor="#F6F6F6">
+        
+        <!--   Header menu     -->
+        <StackLayout Orientation="Horizontal"  BackgroundColor="#FFFFFF" Padding="10">
+             <StackLayout.Margin>
+                     <OnPlatform x:TypeArguments="Thickness">
+                     <On Platform="iOS" Value="0,35,0,0" />
+                     <On Platform="Android, WinPhone, UWP" Value="0,0,0,0" />
+                   </OnPlatform>
+                 </StackLayout.Margin>
+            <Label Text="&lt;" VerticalOptions="Center"/>
+            
+            <StackLayout Orientation="Horizontal" 
+                         HorizontalOptions="CenterAndExpand" 
+                         VerticalOptions="Center"
+                         Spacing="20">
+                <Button FontSize="12" Text="HOME" FontAttributes="Bold"  
+                        HeightRequest="12" BackgroundColor="Transparent"
+                        Clicked="HomePage"/>
+                <Label FontSize="12" Text="CHECK IN" TextColor="Black" FontAttributes="Bold"/>
+                <Label FontSize="12" Text="PROFILE" TextColor="Gray" FontAttributes="Bold"/>
+            </StackLayout>
+            <Image Source="Bell.png" WidthRequest="15" />
+        </StackLayout>
+
+
+        <Grid RowSpacing="60" Padding="15" >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"></RowDefinition>
+                <RowDefinition Height="130"></RowDefinition>
+                <RowDefinition Height="130"></RowDefinition>
+            </Grid.RowDefinitions>
+            
+<!--  First element Circle P          -->
+            <Image Grid.Row="0" Source="dashedBorder.png" Aspect="Fill"/>
+            <Frame BackgroundColor="Transparent" HasShadow="false">
+                <StackLayout 
+                    Orientation="Horizontal" 
+                    HorizontalOptions="Center" 
+                    VerticalOptions="Center"
+                    Spacing="20">
+                    
+                    <Image Source="circlePnew.png" WidthRequest="55"/>
+                    <StackLayout VerticalOptions="Center" Spacing="10">
+                        <Label Text="YOU HAVE EARNED" FontSize="Small" TextColor="#282828" Opacity=".5"/>
+                        <Label Text="367 POINTS" FontAttributes="Bold" TextColor="#282828" Opacity=".7"/>
+                    </StackLayout>
+                </StackLayout>
+                
+            </Frame>
+                
+
+<!--  Second element Lamar         -->
+            <Frame Grid.Row="1" Padding="0" HasShadow="false">
+               <AbsoluteLayout >
+                    <Image 
+                            Source="circleL.png" 
+                           Aspect="AspectFill" AbsoluteLayout.LayoutBounds=".5,0,60,60"
+                           AbsoluteLayout.LayoutFlags="PositionProportional" 
+                           HorizontalOptions="Center" VerticalOptions="Center"
+                           HeightRequest="80" WidthRequest="80" TranslationY="-30" 
+                           />
+                   
+                <Button Text="CHECK IN" TextColor="White" FontAttributes="Bold" FontSize="16"  
+                     AbsoluteLayout.LayoutBounds="0,1,1,40"  
+                     AbsoluteLayout.LayoutFlags="XProportional,YProportional,WidthProportional"  
+                     BackgroundColor="#8e8ffb"/> 
+                    
+                     <StackLayout  BackgroundColor="#FFFFFF"
+                            AbsoluteLayout.LayoutBounds=".5,0.45,1,.5" 
+                            AbsoluteLayout.LayoutFlags="All"
+                            Padding="0, 4"
+                            >
+                        <Label Text="Lamar" FontSize="22"
+                               HorizontalOptions="Center" 
+                               />
+                        <Label Text="95 Baumbach Falls" FontSize="14" TextColor="Gray"
+                               HorizontalOptions="Center" 
+                               />
+                    </StackLayout>
+                </AbsoluteLayout>
+            </Frame>
+            
+
+<!--  Third element Joe's Bar          -->
+            <Frame Grid.Row="2" Padding="0" HasShadow="false">
+               <AbsoluteLayout >
+                    <Image Source="circleJB.png" 
+                           Aspect="AspectFill" AbsoluteLayout.LayoutBounds=".5,0,60,60"
+                           AbsoluteLayout.LayoutFlags="PositionProportional" 
+                           HorizontalOptions="Center" VerticalOptions="Center"
+                           HeightRequest="80" WidthRequest="80" TranslationY="-30" 
+                           />
+                   
+                <Button Text="CHECK IN" TextColor="White" FontAttributes="Bold" FontSize="16"  
+                     AbsoluteLayout.LayoutBounds="0,1,1,40"  
+                     AbsoluteLayout.LayoutFlags="XProportional,YProportional,WidthProportional"  
+                     BackgroundColor="#8e8ffb"/> 
+                    
+                     <StackLayout  BackgroundColor="#FFFFFF"
+                            AbsoluteLayout.LayoutBounds=".5,0.45,1,.5" 
+                            AbsoluteLayout.LayoutFlags="All"
+                            Padding="0, 4"
+                            >
+                        <Label Text="Joe's Bar" FontSize="22"
+                               HorizontalOptions="Center" 
+                               />
+                        <Label Text="95 Baumbach Falls" FontSize="14" TextColor="Gray"
+                               HorizontalOptions="Center" 
+                               />
+                    </StackLayout>
+                </AbsoluteLayout>
+                
+            </Frame>
+ 
+        </Grid>
+
+    </StackLayout>
+
+    
+</ContentPage>

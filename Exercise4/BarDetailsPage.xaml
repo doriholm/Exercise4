@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Exercise4.BarDetailsPage"
+             NavigationPage.HasNavigationBar="false"
+             >
+    
+    <ContentPage.Content>
+        
+<!--   Header menu     -->
+        <StackLayout BackgroundColor="#EFEFEF" Spacing="0">
+            <StackLayout Orientation="Horizontal"  BackgroundColor="#FFFFFF" Padding="10">
+                 <StackLayout.Margin>
+                     <OnPlatform x:TypeArguments="Thickness">
+                     <On Platform="iOS" Value="0,35,0,0" />
+                     <On Platform="Android, WinPhone, UWP" Value="0,0,0,0" />
+                   </OnPlatform>
+                 </StackLayout.Margin>
+            <Label Text="&lt;" VerticalOptions="Center"/>
+            
+            <StackLayout Orientation="Horizontal" 
+                         HorizontalOptions="CenterAndExpand" 
+                         VerticalOptions="Center"
+                         Spacing="20">
+                <Label FontSize="12" Text="HOME"  FontAttributes="Bold"/>
+                <Button FontSize="12" Text="CHECK IN" FontAttributes="Bold"  
+                        HeightRequest="12" BackgroundColor="Transparent"
+                        Clicked="CheckInPage"/>
+                <Label FontSize="12" Text="PROFILE" TextColor="Gray" FontAttributes="Bold"/>
+            </StackLayout>
+            <Image Source="Bell.png" WidthRequest="15" />
+        </StackLayout>
+
+            <ScrollView >
+                <StackLayout>
+<!--      Map      -->
+            <Image Source="map.png" />
+
+<!--     Tabs       -->
+            <Grid BackgroundColor="#EFEFEF" ColumnSpacing="1"> 
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <StackLayout Grid.Column="0"  BackgroundColor="#FFFFFF" Margin="0">
+                    <Label Text="TENDING NOW" FontSize="11" Margin="0, 20"
+                           FontAttributes="Bold" HorizontalOptions="Center" 
+                           VerticalOptions="Center"/>
+                    <BoxView BackgroundColor="#8e8ffb" HeightRequest="2" VerticalOptions="End" Margin="0"/>
+                </StackLayout>
+                <StackLayout Grid.Column="1"  BackgroundColor="#FFFFFF" Margin="0">
+                    <Label Text="STAFF" FontSize="11" Margin="0, 20"
+                           FontAttributes="Bold" HorizontalOptions="Center" 
+                           VerticalOptions="Center"/>                    
+                    <BoxView BackgroundColor="#FFFFFF" HeightRequest="2" VerticalOptions="End" Margin="0"/>
+                </StackLayout>
+                <StackLayout Grid.Column="2"  BackgroundColor="#FFFFFF" Margin="0">
+                    <Label Text="PUB INFO" FontSize="11" Margin="0, 20"
+                           FontAttributes="Bold" HorizontalOptions="Center" 
+                           VerticalOptions="Center"/>
+                    <BoxView BackgroundColor="#FFFFFF" HeightRequest="2" VerticalOptions="End" Margin="0"/>
+                </StackLayout>
+            </Grid>
+
+<!--      Person card      -->
+            <Frame HasShadow="false" Padding="0, 10, 0, 0" Margin="10" CornerRadius="5">
+            <StackLayout BackgroundColor="#FFFFFF" >
+                <Grid Margin="5,0,10,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="20"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" 
+                           Source="Person.png" Aspect="Fill"/>
+                    <Label Grid.Row="0" Grid.Column="1" Text="Jimena" />
+                    <Label Grid.Row="1" Grid.Column="1" 
+                           Text="TENDING NOW" FontSize="10"
+                           TextColor="#8e8ffb" FontAttributes="Bold"/>
+                    <Label Grid.Row="1" Grid.Column="2" 
+                           Text="- 5 minutes ago" FontSize="10"
+                           TextColor="Gray"/>
+                    <Label Grid.Row="0" Grid.Column="4" Text="660" HorizontalOptions="End"/>
+                    <Label Grid.Row="1" Grid.Column="4" 
+                           Text="FOLLOWERS" FontSize="10" 
+                           HorizontalOptions="End" TextColor="Gray"/>
+                </Grid>
+                <Label Text="My outfit for tonight. Come see me!" 
+                       Margin="10"
+                       FontSize="14"/>
+                <Image Source="MomAndChild.png"/>
+            </StackLayout>
+            </Frame>
+
+<!--      Person card 2     -->
+            <Frame HasShadow="false" Padding="0, 10, 0, 0" Margin="10" CornerRadius="5">
+            <StackLayout BackgroundColor="#FFFFFF" >
+                <Grid Margin="5,0,10,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="20"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Image Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" 
+                           Source="Person.png" Aspect="Fill"/>
+                    <Label Grid.Row="0" Grid.Column="1" Text="Jimena" />
+                    <Label Grid.Row="1" Grid.Column="1" 
+                           Text="TENDING NOW" FontSize="10"
+                           TextColor="#8e8ffb" FontAttributes="Bold"/>
+                    <Label Grid.Row="1" Grid.Column="2" 
+                           Text="- 5 minutes ago" FontSize="10"
+                           TextColor="Gray"/>
+                    <Label Grid.Row="0" Grid.Column="4" Text="660" HorizontalOptions="End"/>
+                    <Label Grid.Row="1" Grid.Column="4" 
+                           Text="FOLLOWERS" FontSize="10" 
+                           HorizontalOptions="End" TextColor="Gray"/>
+                </Grid>
+                <Label Text="My outfit for tonight. Come see me!" 
+                       Margin="10"
+                       FontSize="14"/>
+                <Image Source="MomAndChild.png"/>
+            </StackLayout>
+            </Frame>
+
+                    </StackLayout>
+           </ScrollView>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
