@@ -32,7 +32,7 @@
         </StackLayout>
 
             <ScrollView >
-                <StackLayout>
+                <StackLayout Spacing="0">
 <!--      Map      -->
             <Image Source="map.png" />
 
@@ -44,7 +44,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 
-                <StackLayout Grid.Column="0"  BackgroundColor="#FFFFFF" Margin="0">
+                <StackLayout Grid.Column="0"  BackgroundColor="#FFFFFF" Margin="0" >
                     <Label Text="TENDING NOW" FontSize="11" Margin="0, 20"
                            FontAttributes="Bold" HorizontalOptions="Center" 
                            VerticalOptions="Center"/>

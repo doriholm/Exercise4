@@ -15,8 +15,8 @@
                      <On Platform="Android, WinPhone, UWP" Value="0,0,0,0" />
                    </OnPlatform>
                  </StackLayout.Margin>
-            <Label Text="&lt;" VerticalOptions="Center"/>
             
+            <Label Text="&lt;" VerticalOptions="Center"/>
             <StackLayout Orientation="Horizontal" 
                          HorizontalOptions="CenterAndExpand" 
                          VerticalOptions="Center"
@@ -39,8 +39,8 @@
             </Grid.RowDefinitions>
             
 <!--  First element Circle P          -->
-            <Image Grid.Row="0" Source="dashedBorder.png" Aspect="Fill"/>
-            <Frame BackgroundColor="Transparent" HasShadow="false">
+            <Image Grid.Row="0" Source="dashedBorder.png" Aspect="AspectFit"/>
+            <Frame Grid.Row="0" BackgroundColor="Transparent" HasShadow="false">
                 <StackLayout 
                     Orientation="Horizontal" 
                     HorizontalOptions="Center" 
@@ -58,6 +58,9 @@
                 
 
 <!--  Second element Lamar         -->
+            <StackLayout Grid.Row="1" Padding="4,7,4,0">
+                <Frame VerticalOptions="FillAndExpand" ></Frame>
+            </StackLayout>
             <Frame Grid.Row="1" Padding="0" HasShadow="false">
                <AbsoluteLayout >
                     <Image 
@@ -90,6 +93,9 @@
             
 
 <!--  Third element Joe's Bar          -->
+            <StackLayout Grid.Row="2" Padding="4,7,4,0">
+                <Frame VerticalOptions="FillAndExpand" ></Frame>
+            </StackLayout>
             <Frame Grid.Row="2" Padding="0" HasShadow="false">
                <AbsoluteLayout >
                     <Image Source="circleJB.png" 
