@@ -22,10 +22,8 @@
                          HorizontalOptions="CenterAndExpand" 
                          VerticalOptions="Center"
                          Spacing="20">
-                <Label FontSize="12" Text="HOME"  FontAttributes="Bold"/>
-                <Button FontSize="12" Text="CHECK IN" FontAttributes="Bold"  
-                        HeightRequest="12" BackgroundColor="Transparent"
-                        Clicked="CheckInPage"/>
+                <Label FontSize="12" Text="HOME" TextColor="Black" FontAttributes="Bold"/>
+                <Label FontSize="12" Text="CHECK IN" TextColor="Gray" FontAttributes="Bold" x:Name="NavItemBtn"/>
                 <Label FontSize="12" Text="PROFILE" TextColor="Gray" FontAttributes="Bold"/>
             </StackLayout>
             <Image Source="Bell.png" WidthRequest="15" />

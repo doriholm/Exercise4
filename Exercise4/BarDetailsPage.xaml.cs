@@ -10,9 +10,15 @@ namespace Exercise4
         public BarDetailsPage()
         {
             InitializeComponent();
+
+            //Creating fake button by adding tap gesture on Label
+            TapGestureRecognizer tapNavItem = new TapGestureRecognizer();
+            tapNavItem.Tapped += NavItemTapped;
+
+            NavItemBtn.GestureRecognizers.Add(tapNavItem);
         }
 
-        void CheckInPage(object sender, System.EventArgs e)
+        void NavItemTapped(object sender, System.EventArgs e)
         {
             Navigation.PushAsync(new Exercise4Page());
 

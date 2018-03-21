@@ -21,21 +21,20 @@
                          HorizontalOptions="CenterAndExpand" 
                          VerticalOptions="Center"
                          Spacing="20">
-                <Button FontSize="12" Text="HOME" FontAttributes="Bold"  
-                        HeightRequest="12" BackgroundColor="Transparent"
-                        Clicked="HomePage"/>
+                <Label FontSize="12" Text="HOME" TextColor="Gray" FontAttributes="Bold" x:Name="NavItemBtn"/>
                 <Label FontSize="12" Text="CHECK IN" TextColor="Black" FontAttributes="Bold"/>
                 <Label FontSize="12" Text="PROFILE" TextColor="Gray" FontAttributes="Bold"/>
             </StackLayout>
             <Image Source="Bell.png" WidthRequest="15" />
         </StackLayout>
 
-
-        <Grid RowSpacing="60" Padding="15" >
+         <ScrollView >
+                <StackLayout Spacing="0">
+        <Grid RowSpacing="40" Padding="15" >
             <Grid.RowDefinitions>
                 <RowDefinition Height="100"></RowDefinition>
-                <RowDefinition Height="130"></RowDefinition>
-                <RowDefinition Height="130"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
+                <RowDefinition Height="Auto"></RowDefinition>
             </Grid.RowDefinitions>
             
 <!--  First element Circle P          -->
@@ -55,45 +54,127 @@
                 </StackLayout>
                 
             </Frame>
+
+<!--      Android test      -->
+            
+            <Frame Grid.Row="1"  HasShadow="false" Padding="0" BackgroundColor="Transparent">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <StackLayout Grid.Row="1" Grid.RowSpan="4" Padding="4,7,4,0">
+                <Frame VerticalOptions="FillAndExpand" ></Frame>
+            </StackLayout>
+                    <Frame Grid.Row="1" Grid.RowSpan="4" 
+                           HasShadow="false" Padding="0,35,0,0"
+                           CornerRadius="5">
+                        <Grid RowSpacing="0">    
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
+
+                            <Frame Grid.Row="1" HasShadow="false" OutlineColor="Transparent"
+                                   HeightRequest="30"
+                                   HorizontalOptions="Fill"
+                                   BackgroundColor="#8e8ffb"
+                                   CornerRadius="5"
+                                     />
+                            <StackLayout Grid.Row="0" Grid.RowSpan="2" Spacing="0" Margin="0">
+                                <Label Text="Joe's Bar" 
+                                       FontSize="22"
+                                       HorizontalTextAlignment="Center"
+                                       BackgroundColor="#FFFFFF"
+                                       />
+                                <Label Text="95 Baumbach Falls"
+                                       HeightRequest="30"
+                                       HorizontalTextAlignment="Center"
+                                       BackgroundColor="#FFFFFF"
+                                       FontSize="14" TextColor="Gray"
+                                       />
+                                <Label x:Name="checkInBtn"
+                                       Text="CHECK IN" 
+                                       TextColor="#FFFFFF"
+                                       FontAttributes="Bold"
+                                       BackgroundColor="Transparent"
+                                       HorizontalOptions="Center"
+                                       Margin="10"
+                                        />
+                            </StackLayout>
+                        </Grid>
+                    </Frame>
+                    <Image Source="circleJB.png"
+                           Grid.Row="0"
+                           Grid.RowSpan="2"/>
+                </Grid>
+            </Frame>
                 
 
 <!--  Second element Lamar         -->
-            <StackLayout Grid.Row="1" Padding="4,7,4,0">
+       
+             <Frame Grid.Row="2"  HasShadow="false" Padding="0" BackgroundColor="Transparent">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <StackLayout Grid.Row="1" Grid.RowSpan="4" Padding="4,7,4,0">
                 <Frame VerticalOptions="FillAndExpand" ></Frame>
             </StackLayout>
-            <Frame Grid.Row="1" Padding="0" HasShadow="false">
-               <AbsoluteLayout >
-                    <Image 
-                            Source="circleL.png" 
-                           Aspect="AspectFill" AbsoluteLayout.LayoutBounds=".5,0,60,60"
-                           AbsoluteLayout.LayoutFlags="PositionProportional" 
-                           HorizontalOptions="Center" VerticalOptions="Center"
-                           HeightRequest="80" WidthRequest="80" TranslationY="-30" 
-                           />
-                   
-                <Button Text="CHECK IN" TextColor="White" FontAttributes="Bold" FontSize="16"  
-                     AbsoluteLayout.LayoutBounds="0,1,1,40"  
-                     AbsoluteLayout.LayoutFlags="XProportional,YProportional,WidthProportional"  
-                     BackgroundColor="#8e8ffb"/> 
-                    
-                     <StackLayout  BackgroundColor="#FFFFFF"
-                            AbsoluteLayout.LayoutBounds=".5,0.45,1,.5" 
-                            AbsoluteLayout.LayoutFlags="All"
-                            Padding="0, 4"
-                            >
-                        <Label Text="Lamar" FontSize="22"
-                               HorizontalOptions="Center" 
-                               />
-                        <Label Text="95 Baumbach Falls" FontSize="14" TextColor="Gray"
-                               HorizontalOptions="Center" 
-                               />
-                    </StackLayout>
-                </AbsoluteLayout>
-            </Frame>
-            
+                    <Frame Grid.Row="1" Grid.RowSpan="4" 
+                           HasShadow="false" Padding="0,35,0,0"
+                           CornerRadius="5">
+                        <Grid RowSpacing="0">    
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="auto"/>
+                            </Grid.RowDefinitions>
 
-<!--  Third element Joe's Bar          -->
-            <StackLayout Grid.Row="2" Padding="4,7,4,0">
+                            <Frame Grid.Row="1" HasShadow="false" OutlineColor="Transparent"
+                                   HeightRequest="30"
+                                   HorizontalOptions="Fill"
+                                   BackgroundColor="#8e8ffb"
+                                   CornerRadius="5"
+                                     />
+                            <StackLayout Grid.Row="0" Grid.RowSpan="2" Spacing="0" Margin="0">
+                                <Label Text="Lamar" 
+                                       FontSize="22"
+                                       HorizontalTextAlignment="Center"
+                                       BackgroundColor="#FFFFFF"
+                                       />
+                                <Label Text="95 Baumbach Falls"
+                                       HeightRequest="30"
+                                       HorizontalTextAlignment="Center"
+                                       BackgroundColor="#FFFFFF"
+                                       FontSize="14" TextColor="Gray"
+                                       />
+                                <Label x:Name="checkInBtn2"
+                                       Text="CHECK IN" 
+                                       TextColor="#FFFFFF"
+                                       FontAttributes="Bold"
+                                       BackgroundColor="Transparent"
+                                       HorizontalOptions="Center"
+                                       Margin="10"
+                                        />
+                            </StackLayout>
+                        </Grid>
+                    </Frame>
+                    <Image Source="circleL.png"
+                           Grid.Row="0"
+                           Grid.RowSpan="2"/>
+                </Grid>
+            </Frame>
+
+<!--   Joe's Bar previous version. Not good enough for Android         -->
+            
+        <!--    <StackLayout Grid.Row="2" Padding="4,7,4,0">
                 <Frame VerticalOptions="FillAndExpand" ></Frame>
             </StackLayout>
             <Frame Grid.Row="2" Padding="0" HasShadow="false">
@@ -124,9 +205,11 @@
                     </StackLayout>
                 </AbsoluteLayout>
                 
-            </Frame>
+            </Frame>-->
  
         </Grid>
+       </StackLayout>
+      </ScrollView>
 
     </StackLayout>
 

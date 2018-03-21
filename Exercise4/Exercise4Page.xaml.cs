@@ -10,10 +10,25 @@ namespace Exercise4
         public Exercise4Page()
         {
             InitializeComponent();
+
+            //Creating fake buttons by adding tap gesture on Labels
+            TapGestureRecognizer tapCheckIn = new TapGestureRecognizer();
+            tapCheckIn.Tapped += CheckInTapped;
+
+                checkInBtn.GestureRecognizers.Add(tapCheckIn);
+
+            TapGestureRecognizer tapNavItem = new TapGestureRecognizer();
+            tapNavItem.Tapped += NavItemTapped;
+
+                NavItemBtn.GestureRecognizers.Add(tapNavItem);
         }
 
+        private void CheckInTapped(object sender, System.EventArgs e)
+        {
+            this.DisplayAlert("Confirm", "Check in to Joe's Bar", "Yes", "No");
+        }
 
-        void HomePage(object sender, System.EventArgs e)
+        private void NavItemTapped(object sender, System.EventArgs e)
         {
             Navigation.PopAsync();
 
